@@ -1,0 +1,9 @@
+if(
+    prop("Segunda Revisão"), 
+    dateAdd(prop("Primeiro Contato"), 30, "days"), 
+    if(
+        prop("Primeira Revisão"), 
+        dateAdd(prop("Primeiro Contato"), 7, "days"), 
+        dateAdd(prop("Primeiro Contato"), 1, "days")
+    )
+)
